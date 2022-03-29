@@ -1,13 +1,10 @@
 import type { Nullable, AuthProviderConfig } from '../../types';
-import SlackProvider from 'next-auth/providers/slack';
-
-const SLACK_CLIENT_ID = process.env.SLACK_CLIENT_ID!;
-const SLACK_CLIENT_SECRET = process.env.SLACK_CLIENT_SECRET!;
+import GoogleProvider from "next-auth/providers/google";
 
 export const authProviderConfig: Nullable<AuthProviderConfig> = {
-  provider: SlackProvider({
-    clientId: SLACK_CLIENT_ID,
-    clientSecret: SLACK_CLIENT_SECRET,
+  provider: GoogleProvider({
+    clientId: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET
   }),
   type: 'slack',
 };
