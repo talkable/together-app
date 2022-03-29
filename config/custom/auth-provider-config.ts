@@ -6,5 +6,5 @@ export const authProviderConfig: Nullable<AuthProviderConfig> = {
     clientId: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET
   }),
-  type: 'slack',
+  type: 'google',
 };
