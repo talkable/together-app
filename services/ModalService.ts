@@ -99,9 +99,7 @@ export class ModalService implements IModalService {
 
   public async renderCheckInSelfConfirmation(params: RenderCheckInSelfConfirmationParams): Promise<void> {
     const { url, member, isFromRepeatCheckIn, ...rest } = params;
-
-    console.log(url);
-    console.log(process.env.SLACK_CLIENT_ID!);
+    
     const modal = Modal({ title: 'Check In' })
       .blocks(
         setIfTruthy(isFromRepeatCheckIn,
