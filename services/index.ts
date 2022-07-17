@@ -90,10 +90,10 @@ export const memberService = new MemberService({
   }),
   hoursBeforeReminder: remindIfNotCheckedInWithinRule
     ? remindIfNotCheckedInWithinRule.hours
-    : 24,
+    : 168,
   hoursBeforeNotification: notifyIfNotCheckedInWithinRule
     ? notifyIfNotCheckedInWithinRule.hours
-    : 24,
+    : 168,
   requestCheckInDirectMessage: checkInRequestRule
     ? checkInRequestRule.requestCheckInDirectMessage
     : true,
